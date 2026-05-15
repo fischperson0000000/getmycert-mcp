@@ -1,0 +1,56 @@
+{
+  "name": "@getmycert/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for GetMyCert.com — IT certification practice questions for AI agents. Supports 27 certifications and x402 micropayments.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "getmycert-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "getmycert",
+    "certification",
+    "practice-questions",
+    "aws",
+    "comptia",
+    "azure",
+    "x402",
+    "agentic-payments",
+    "claude",
+    "cursor"
+  ],
+  "author": "GetMyCert",
+  "license": "MIT",
+  "homepage": "https://getmycert.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getmycert/mcp-server.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "viem": "^2.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
